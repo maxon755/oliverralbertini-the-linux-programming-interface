@@ -39,3 +39,7 @@ showall :
 	@ echo ${EXE}
 
 ${EXE} : ${TLPI_LIB}		# True as a rough approximation
+
+go-copy :
+	ar rcs ../lib/liberror_functions.a ../lib/error_functions.o
+	go build -o go-copy copy.go
